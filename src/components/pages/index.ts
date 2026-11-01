@@ -1,0 +1,7 @@
+export { AboutUs } from './AboutUs'
+export { PrivacyPolicy } from './PrivacyPolicy'
+export { TermsOfUse } from './TermsOfUse'
+export { TermsAndConditions } from './TermsAndConditions'
+export { Contact } from './Contact'
+export { Login } from './Login'
+export { Signup } from './Signup'
