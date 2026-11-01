@@ -54,24 +54,24 @@ export const RequestDemo = () => {
         <aside className="auth-aside">
           <span className="auth-pill">Request a Demo</span>
           <h2>
-            Ready to transform your <span className="gradient-text">school operations?</span>
+            Ready to transform how you <span className="gradient-text">build websites?</span>
           </h2>
           <p>
-            Fill out the form below and we'll help you find the right solution for your school. Our
-            team will get back to you within 24 hours.
+            Fill out the form below and we'll show you how lunchpadd can help you build and publish
+            stunning websites in minutes. Our team will get back to you within 24 hours.
           </p>
           <ul className="auth-points">
             <li>
               <CheckCircle2 className="auth-tick" size={18} />
-              Personalized walkthrough tailored to your school's needs.
+              Personalized 1-on-1 walkthrough of the AI site builder.
             </li>
             <li>
               <CheckCircle2 className="auth-tick" size={18} />
-              Custom plan and onboarding support for your institution.
+              Tailored plans and custom solutions for your business or agency.
             </li>
             <li>
               <CheckCircle2 className="auth-tick" size={18} />
-              Dedicated 24-hour turnaround on all questions.
+              Dedicated 24-hour turnaround on all questions and onboarding.
             </li>
           </ul>
           <p className="auth-trust">
@@ -93,10 +93,10 @@ export const RequestDemo = () => {
 
           <span className="demo-badge">Request a Demo</span>
           <h1>
-            Ready to transform your <span className="gradient-text">school operations?</span>
+            Ready to transform how you <span className="gradient-text">build websites?</span>
           </h1>
           <p className="auth-lede">
-            Fill out the form below and we'll help you find the right solution for your school. Our
+            Fill out the form below and we'll help you find the right solution for your website. Our
             team will get back to you within 24 hours.
           </p>
 
@@ -148,7 +148,7 @@ export const RequestDemo = () => {
                     type="email"
                     value={workEmail}
                     onChange={(event) => setWorkEmail(event.target.value)}
-                    placeholder="john@school.com"
+                    placeholder="john@company.com"
                     autoComplete="email"
                     aria-invalid={Boolean(errors.email)}
                   />
