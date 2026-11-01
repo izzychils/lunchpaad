@@ -51,7 +51,7 @@ export const Footer = () => {
         <div className="footer-content">
           <div className="footer-brand">
             <div className="footer-logo">
-              <img src="/logo.jpeg" alt="Lunchpadd logo" className="footer-logo-img" />
+              <img src="/logo.jpg" alt="Lunchpadd logo" className="footer-logo-img" />
               <h3>Lunchpadd</h3>
             </div>
             <p>Build stunning websites with AI-powered technology</p>

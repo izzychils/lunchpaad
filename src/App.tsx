@@ -12,9 +12,8 @@ import { ScrollToTop } from './components/layout/ScrollToTop'
 import {
   AboutUs,
   Contact,
-  Login,
   PrivacyPolicy,
-  Signup,
+  RequestDemo,
   TermsAndConditions,
   TermsOfUse
 } from './components/pages'
@@ -34,8 +33,7 @@ function HomePage() {
 }
 
 /**
- * The shared site furniture. Every page except the auth screens renders through
- * here, so the header and footer mount once and persist across navigation.
+ * The shared site furniture.
  */
 function SiteChrome() {
   return (
@@ -52,14 +50,11 @@ function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
-        {/*
-          The login and signup screens deliberately render without the header and
-          footer. They are sized to fit one screen so nothing important sits
-          below the fold on a phone, and the page chrome alone would push the
-          form past the viewport.
-        */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        {/* Request a Demo screens render without the header and footer */}
+        <Route path="/request-demo" element={<RequestDemo />} />
+        <Route path="/demo" element={<RequestDemo />} />
+        <Route path="/login" element={<RequestDemo />} />
+        <Route path="/signup" element={<RequestDemo />} />
 
         <Route element={<SiteChrome />}>
           <Route path="/" element={<HomePage />} />

@@ -1,4 +1,5 @@
 import { Check } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import './Pricing.css'
 
 export const Pricing = () => {
@@ -8,7 +9,7 @@ export const Pricing = () => {
       tagline: 'Perfect for getting started',
       price: '$0',
       period: '/month',
-      buttonText: 'Get Started',
+      buttonText: 'Request a Demo',
       isPrimary: false,
       features: [
         '1 website',
@@ -23,7 +24,7 @@ export const Pricing = () => {
       tagline: 'For professionals and teams',
       price: '$29',
       period: '/month',
-      buttonText: 'Get Started',
+      buttonText: 'Request a Demo',
       isPrimary: true,
       badge: 'MOST POPULAR',
       features: [
@@ -42,7 +43,7 @@ export const Pricing = () => {
       tagline: 'For large organizations',
       price: '$99.99',
       period: '/month',
-      buttonText: 'Get Started',
+      buttonText: 'Request a Demo',
       isPrimary: false,
       features: [
         'Unlimited websites',
@@ -79,9 +80,12 @@ export const Pricing = () => {
                   <span className="price-period">{plan.period}</span>
                 </div>
 
-                <button className={`plan-button ${plan.isPrimary ? 'primary' : ''}`}>
+                <Link
+                  to="/request-demo"
+                  className={`plan-button ${plan.isPrimary ? 'primary' : ''}`}
+                >
                   {plan.buttonText}
-                </button>
+                </Link>
 
                 <ul className="plan-features">
                   {plan.features.map((feature, idx) => (

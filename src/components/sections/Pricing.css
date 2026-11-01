@@ -139,6 +139,9 @@
 }
 
 .plan-button {
+  display: block;
+  text-align: center;
+  text-decoration: none;
   width: 100%;
   padding: 0.85rem 1.5rem;
   border-radius: var(--radius-sm);

@@ -98,7 +98,7 @@ export const Signup = () => {
         <main className="auth-card">
           <div className="auth-brand">
             <Link to="/" className="auth-brand-link">
-              <img src="/logo.jpeg" alt="" className="auth-brand-logo" />
+              <img src="/logo.jpg" alt="" className="auth-brand-logo" />
               <span className="auth-brand-name">Lunchpadd</span>
             </Link>
             <Link to="/" className="auth-back">

@@ -8,7 +8,7 @@ All references to "lunchpaad" / "Shopperly" have been updated to **"Lunchpadd"**
 
 ## 🎨 Design & UI Upgrades
 
-- **New Brand Identity:** Rebranded from lunchpaad to **Lunchpadd** with new logo (`ui/new-logo.jpeg` → `public/logo.jpeg`).
+- **New Brand Identity:** Rebranded from lunchpaad to **Lunchpadd** with new logo (`ui/new-logo.jpg` → `public/logo.jpg`).
 - **Typography:** Adopted Google Inter font with optimized weights and tighter, modern letter-spacing.
 - **Color Palette:** Shifted to a vibrant, cohesive modern palette:
   - Primary: Deep Indigo / Violet (`#6c5ce7`, `#5a4bd1`, `#a29bfe`)

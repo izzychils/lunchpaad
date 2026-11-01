@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import './CTA.css'
 
 export const CTA = () => {
@@ -6,14 +7,14 @@ export const CTA = () => {
     <section className="cta">
       <div className="container">
         <div className="cta-content">
-          <h2>Ready to build your dream website?</h2>
+          <h2>Ready to transform your operations?</h2>
           <p className="cta-subtitle">
-            Join thousands of creators who are building with AI
+            See how our platform can streamline your workflows and save you hours every week.
           </p>
-          <button className="cta-button">
-            Get Started Free
+          <Link to="/request-demo" className="cta-button">
+            Request a Demo
             <ArrowRight size={20} />
-          </button>
+          </Link>
         </div>
       </div>
     </section>
