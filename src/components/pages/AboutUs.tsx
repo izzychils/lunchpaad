@@ -9,9 +9,9 @@ export const AboutUs = () => {
         </div>
 
         <section className="about-section">
-          <h2>What is Lunchpadd?</h2>
+          <h2>What is Lunchpaad?</h2>
           <p>
-            Lunchpadd is an AI website builder that turns your ideas into stunning, fully functional websites in seconds. 
+            Lunchpaad is an AI website builder that turns your ideas into stunning, fully functional websites in seconds. 
             Describe what you want and our AI builds it; then refine it with simple drag-and-drop editing.
           </p>
         </section>
@@ -29,11 +29,11 @@ export const AboutUs = () => {
           <div className="how-it-works-steps">
             <div className="step">
               <h3>1. Describe it</h3>
-              <p>Tell Lunchpadd about your business and the site you want, in plain words.</p>
+              <p>Tell Lunchpaad about your business and the site you want, in plain words.</p>
             </div>
             <div className="step">
               <h3>2. Let the AI build it</h3>
-              <p>Lunchpadd generates the pages, layout, text and design for you in seconds.</p>
+              <p>Lunchpaad generates the pages, layout, text and design for you in seconds.</p>
             </div>
             <div className="step">
               <h3>3. Make it yours</h3>

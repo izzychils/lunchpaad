@@ -12,7 +12,7 @@ export const PrivacyPolicy = () => {
         <div className="legal-content">
           <div className="legal-intro">
             <p>
-              Lunchpadd ("we", "us", "our"), collects and uses information to build and host your website. 
+              Lunchpaad ("we", "us", "our"), collects and uses information to build and host your website. 
               This policy explains what we collect, why, who sees it and your rights under the Nigeria Data Protection Act (NDPA).
             </p>
           </div>
@@ -49,7 +49,7 @@ export const PrivacyPolicy = () => {
             <h2>4. Who We Share It With</h2>
             <p>We share data only with:</p>
             <ul>
-              <li><strong>Service providers</strong> that help us run Lunchpadd, such as hosting, AI processing, domain, email, analytics and payment providers, who must protect it and use it only on our instructions;</li>
+              <li><strong>Service providers</strong> that help us run Lunchpaad, such as hosting, AI processing, domain, email, analytics and payment providers, who must protect it and use it only on our instructions;</li>
               <li><strong>Authorities</strong> when the law requires it; and</li>
               <li><strong>In a business transfer</strong>, with notice to you.</li>
             </ul>
@@ -95,12 +95,12 @@ export const PrivacyPolicy = () => {
               <li>Withdraw consent</li>
               <li>Complain to the Nigeria Data Protection Commission</li>
             </ul>
-            <p><strong>To exercise your rights, email:</strong> privacy@Lunchpadd.com</p>
+            <p><strong>To exercise your rights, email:</strong> privacy@lunchpaad.com</p>
           </section>
 
           <section className="legal-section">
             <h2>9. Children</h2>
-            <p>Lunchpadd is not for anyone under 18.</p>
+            <p>Lunchpaad is not for anyone under 18.</p>
           </section>
 
           <section className="legal-section">
@@ -110,7 +110,7 @@ export const PrivacyPolicy = () => {
 
           <div className="legal-contact">
             <h3>Questions About Privacy?</h3>
-            <p>Contact us at <a href="mailto:privacy@Lunchpadd.com">privacy@Lunchpadd.com</a></p>
+            <p>Contact us at <a href="mailto:privacy@lunchpaad.com">privacy@lunchpaad.com</a></p>
           </div>
         </div>
       </div>

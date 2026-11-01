@@ -60,7 +60,7 @@ export const Signup = () => {
      * No account service is connected yet: the form validates, then says so
      * rather than pretending an account was created.
      */
-    setNote('Accounts are not live yet — email support@Lunchpadd.com and we will set yours up.')
+    setNote('Accounts are not live yet — email support@lunchpaad.com and we will set yours up.')
   }
 
   return (
@@ -72,7 +72,7 @@ export const Signup = () => {
             Start free, <span className="gradient-text">publish fast</span>
           </h2>
           <p>
-            Describe your business and Lunchpadd builds the site with you — pages, copy and
+            Describe your business and Lunchpaad builds the site with you — pages, copy and
             design included.
           </p>
           <ul className="auth-points">
@@ -99,7 +99,7 @@ export const Signup = () => {
           <div className="auth-brand">
             <Link to="/" className="auth-brand-link">
               <img src="/logo.jpg" alt="" className="auth-brand-logo" />
-              <span className="auth-brand-name">Lunchpadd</span>
+              <span className="auth-brand-name">Lunchpaad</span>
             </Link>
             <Link to="/" className="auth-back">
               Back to home

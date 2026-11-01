@@ -6,39 +6,39 @@ export const Contact = () => {
     {
       icon: <MessageCircle />,
       title: 'Product Help and Technical Support',
-      email: 'support@Lunchpadd.com',
+      email: 'support@lunchpaad.com',
       phone: '0800 662 5000',
       description: 'Get help with building your site, troubleshooting issues, or technical questions'
     },
     {
       icon: <CreditCard />,
       title: 'Sales and Business Plans',
-      email: 'sales@Lunchpadd.com',
+      email: 'sales@lunchpaad.com',
       description: 'Interested in Enterprise plans or custom solutions? Our sales team is here to help'
     },
     {
       icon: <CreditCard />,
       title: 'Billing and Subscriptions',
-      email: 'billing@Lunchpadd.com',
+      email: 'billing@lunchpaad.com',
       description: 'Questions about your subscription, invoices, or payment methods'
     },
     {
       icon: <Shield />,
       title: 'Privacy and Data Requests',
-      email: 'privacy@Lunchpadd.com',
+      email: 'privacy@lunchpaad.com',
       note: 'Use subject line: "Data Request"',
       description: 'Exercise your data rights or ask questions about how we handle your information'
     },
     {
       icon: <AlertCircle />,
       title: 'Report Abuse or Takedown Request',
-      email: 'abuse@Lunchpadd.com',
+      email: 'abuse@lunchpaad.com',
       description: 'Report content that violates our terms or submit a legal takedown request'
     },
     {
       icon: <Scale />,
       title: 'Legal Notices',
-      email: 'legal@Lunchpadd.com',
+      email: 'legal@lunchpaad.com',
       description: 'Send legal correspondence or formal notices'
     }
   ]
@@ -91,7 +91,7 @@ export const Contact = () => {
               <strong>Support Hours:</strong> Monday to Saturday, 8:00 am to 7:00 pm WAT
             </div>
             <div className="company-detail-item">
-              <strong>Website:</strong> <a href="https://Lunchpadd.com">Lunchpadd.com</a>
+              <strong>Website:</strong> <a href="https://lunchpaad.com">lunchpaad.com</a>
             </div>
           </div>
         </div>

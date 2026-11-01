@@ -12,14 +12,14 @@ export const TermsAndConditions = () => {
         <div className="legal-content">
           <div className="legal-intro">
             <p>
-              These Terms and Conditions are the commercial agreement between you and Lunchpadd. 
+              These Terms and Conditions are the commercial agreement between you and Lunchpaad. 
               They apply with the Terms of Use and Privacy Policy.
             </p>
           </div>
 
           <section className="legal-section">
             <h2>1. Plans and Fees</h2>
-            <p>Lunchpadd may offer free and paid plans. The features, limits and prices of each plan are shown on our pricing page or in your order.</p>
+            <p>Lunchpaad may offer free and paid plans. The features, limits and prices of each plan are shown on our pricing page or in your order.</p>
             
             <h3>Free Plan - $0/month</h3>
             <ul>
@@ -27,7 +27,7 @@ export const TermsAndConditions = () => {
               <li>Basic AI builder</li>
               <li>Standard templates</li>
               <li>Community support</li>
-              <li>Lunchpadd branding</li>
+              <li>Lunchpaad branding</li>
             </ul>
 
             <h3>Pro Plan - $29/month</h3>
@@ -103,7 +103,7 @@ export const TermsAndConditions = () => {
           <section className="legal-section">
             <h2>7. Intellectual Property</h2>
             <p>
-              You keep ownership of your content. Lunchpadd keeps all rights in Lunchpadd, its software, templates and branding. 
+              You keep ownership of your content. Lunchpaad keeps all rights in Lunchpaad, its software, templates and branding. 
               You grant us the licence needed to host and display your sites. You confirm you have the rights to everything you 
               upload or prompt us to use.
             </p>
@@ -120,7 +120,7 @@ export const TermsAndConditions = () => {
           <section className="legal-section">
             <h2>9. Disclaimers</h2>
             <p>
-              Lunchpadd is provided "as is" and "as available". We do not promise that it will be error-free, that AI output 
+              Lunchpaad is provided "as is" and "as available". We do not promise that it will be error-free, that AI output 
               will be accurate or unique, or that your site will achieve any search ranking, traffic or sales.
             </p>
           </section>
@@ -128,7 +128,7 @@ export const TermsAndConditions = () => {
           <section className="legal-section">
             <h2>10. Limitation of Liability</h2>
             <p>
-              To the extent the law allows, Lunchpadd is not liable for indirect or consequential loss, lost profits, lost sales 
+              To the extent the law allows, Lunchpaad is not liable for indirect or consequential loss, lost profits, lost sales 
               or lost data. Our total liability for any claim is limited to the fees you paid in the three months before the claim arose.
             </p>
           </section>
@@ -164,7 +164,7 @@ export const TermsAndConditions = () => {
 
           <div className="legal-contact">
             <h3>Questions About Pricing or Billing?</h3>
-            <p>Contact us at <a href="mailto:billing@Lunchpadd.com">billing@Lunchpadd.com</a></p>
+            <p>Contact us at <a href="mailto:billing@lunchpaad.com">billing@lunchpaad.com</a></p>
           </div>
         </div>
       </div>

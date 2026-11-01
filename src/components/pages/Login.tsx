@@ -44,7 +44,7 @@ export const Login = () => {
      * There is no account service connected to this site yet, so the page says
      * that plainly instead of pretending the details were accepted.
      */
-    setNote('Accounts are not live yet — email support@Lunchpadd.com and we will set yours up.')
+    setNote('Accounts are not live yet — email support@lunchpaad.com and we will set yours up.')
   }
 
   return (
@@ -83,7 +83,7 @@ export const Login = () => {
           <div className="auth-brand">
             <Link to="/" className="auth-brand-link">
               <img src="/logo.jpg" alt="" className="auth-brand-logo" />
-              <span className="auth-brand-name">Lunchpadd</span>
+              <span className="auth-brand-name">Lunchpaad</span>
             </Link>
             <Link to="/" className="auth-back">
               Back to home
@@ -177,7 +177,7 @@ export const Login = () => {
           )}
 
           <p className="auth-switch">
-            New to Lunchpadd?{' '}
+            New to Lunchpaad?{' '}
             <Link className="auth-link" to="/signup">
               Create an account
             </Link>

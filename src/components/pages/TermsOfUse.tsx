@@ -12,15 +12,15 @@ export const TermsOfUse = () => {
         <div className="legal-content">
           <div className="legal-intro">
             <p>
-              These Terms of Use govern your use of Lunchpadd, including the AI builder, the drag-and-drop editor, 
-              hosting and any related tools. By using Lunchpadd you agree to them.
+              These Terms of Use govern your use of Lunchpaad, including the AI builder, the drag-and-drop editor, 
+              hosting and any related tools. By using Lunchpaad you agree to them.
             </p>
           </div>
 
           <section className="legal-section">
             <h2>1. Eligibility</h2>
             <p>
-              You must be 18 or older and able to enter a binding agreement. If you use Lunchpadd for a business, 
+              You must be 18 or older and able to enter a binding agreement. If you use Lunchpaad for a business, 
               you confirm you can bind it.
             </p>
           </section>
@@ -45,7 +45,7 @@ export const TermsOfUse = () => {
           <section className="legal-section">
             <h2>4. AI-Generated Content</h2>
             <p>
-              Lunchpadd's AI creates text, layouts, images and code from your prompts. Results may be inaccurate, 
+              Lunchpaad's AI creates text, layouts, images and code from your prompts. Results may be inaccurate, 
               incomplete or similar to content made for others. You must review everything before publishing. 
               As between you and us, you may use the output for your business, subject to these terms and the rights of third parties.
             </p>
@@ -53,7 +53,7 @@ export const TermsOfUse = () => {
 
           <section className="legal-section">
             <h2>5. Acceptable Use</h2>
-            <p>You must not use Lunchpadd to build or host:</p>
+            <p>You must not use Lunchpaad to build or host:</p>
             <ul>
               <li>Unlawful, fraudulent, deceptive or phishing sites, including fake shops or impersonation of brands, banks or government bodies;</li>
               <li>Content that infringes copyright, trademarks or other rights;</li>
@@ -85,15 +85,15 @@ export const TermsOfUse = () => {
           <section className="legal-section">
             <h2>8. Our Property</h2>
             <p>
-              Lunchpadd, its software, templates, design, name and logo belong to Lunchpadd. Templates and assets are licensed 
-              for use on your Lunchpadd site only.
+              Lunchpaad, its software, templates, design, name and logo belong to Lunchpaad. Templates and assets are licensed 
+              for use on your Lunchpaad site only.
             </p>
           </section>
 
           <section className="legal-section">
             <h2>9. Availability</h2>
             <p>
-              We work to keep Lunchpadd and your sites online but cannot promise uninterrupted service. We may update, 
+              We work to keep Lunchpaad and your sites online but cannot promise uninterrupted service. We may update, 
               change or retire features with reasonable notice.
             </p>
           </section>
@@ -101,7 +101,7 @@ export const TermsOfUse = () => {
           <section className="legal-section">
             <h2>10. Ending Your Use</h2>
             <p>
-              You may stop using Lunchpadd and delete your account at any time. We may suspend or end accounts for breach of these terms.
+              You may stop using Lunchpaad and delete your account at any time. We may suspend or end accounts for breach of these terms.
             </p>
           </section>
 
@@ -112,7 +112,7 @@ export const TermsOfUse = () => {
 
           <div className="legal-contact">
             <h3>Questions About These Terms?</h3>
-            <p>Contact us at <a href="mailto:legal@Lunchpadd.com">legal@Lunchpadd.com</a></p>
+            <p>Contact us at <a href="mailto:legal@lunchpaad.com">legal@lunchpaad.com</a></p>
           </div>
         </div>
       </div>

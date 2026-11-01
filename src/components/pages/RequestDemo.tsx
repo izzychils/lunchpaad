@@ -57,7 +57,7 @@ export const RequestDemo = () => {
             Ready to transform how you <span className="gradient-text">build websites?</span>
           </h2>
           <p>
-            Fill out the form below and we'll show you how lunchpadd can help you build and publish
+            Fill out the form below and we'll show you how Lunchpaad can help you build and publish
             stunning websites in minutes. Our team will get back to you within 24 hours.
           </p>
           <ul className="auth-points">
@@ -84,7 +84,7 @@ export const RequestDemo = () => {
           <div className="auth-brand">
             <Link to="/" className="auth-brand-link">
               <img src="/logo.jpg" alt="" className="auth-brand-logo" />
-              <span className="auth-brand-name">lunchpadd</span>
+              <span className="auth-brand-name">Lunchpaad</span>
             </Link>
             <Link to="/" className="auth-back">
               Back to home

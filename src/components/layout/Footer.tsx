@@ -51,8 +51,8 @@ export const Footer = () => {
         <div className="footer-content">
           <div className="footer-brand">
             <div className="footer-logo">
-              <img src="/logo.jpg" alt="Lunchpadd logo" className="footer-logo-img" />
-              <h3>Lunchpadd</h3>
+              <img src="/logo.jpg" alt="Lunchpaad logo" className="footer-logo-img" />
+              <h3>Lunchpaad</h3>
             </div>
             <p>Build stunning websites with AI-powered technology</p>
             {/* Social media icons commented out
@@ -96,7 +96,7 @@ export const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2026 Lunchpadd. All rights reserved.</p>
+          <p>&copy; 2026 Lunchpaad. All rights reserved.</p>
           <div className="footer-legal">
             <Link to="/privacy-policy">Privacy Policy</Link>
             <Link to="/terms-of-use">Terms of Use</Link>

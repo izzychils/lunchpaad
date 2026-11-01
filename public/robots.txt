@@ -1,4 +1,4 @@
-# robots.txt - www.Lunchpadd.com
+# robots.txt - www.lunchpaad.com
 #
 # Crawl rules for search engines. Allow/Disallow control crawling, not
 # indexing: a Disallow only stops a URL being fetched, and pages that must
@@ -19,4 +19,4 @@ Disallow: /login
 Disallow: /signup
 
 # ---------------------------------------------------------------- sitemap
-Sitemap: https://www.Lunchpadd.com/sitemap.xml
+Sitemap: https://www.lunchpaad.com/sitemap.xml
