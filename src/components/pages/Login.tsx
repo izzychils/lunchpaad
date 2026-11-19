@@ -44,7 +44,7 @@ export const Login = () => {
      * There is no account service connected to this site yet, so the page says
      * that plainly instead of pretending the details were accepted.
      */
-    setNote('Accounts are not live yet — email support@lunchpaad.com and we will set yours up.')
+    setNote('Accounts are not live yet - email support@lunchpaad.com and we will set yours up.')
   }
 
   return (

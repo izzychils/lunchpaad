@@ -2,7 +2,7 @@
  * The login and signup screens.
  *
  * Both pages must fit one screen: a person signing in on a phone should see the
- * whole form — every field, the button and the way back — without scrolling.
+ * whole form - every field, the button and the way back - without scrolling.
  * That is why the page fills the viewport itself (`100dvh`, so mobile browser
  * chrome coming and going does not change it), why the vertical rhythm is
  * expressed in `vh`-aware clamps that compress on short screens, and why the
@@ -339,7 +339,7 @@
 }
 
 /*
- * Short viewports — 640-700px tall, which is a common Android phone in portrait
+ * Short viewports - 640-700px tall, which is a common Android phone in portrait
  * and any phone in landscape. The signup form is the tallest thing either page
  * renders (four fields, the terms row, the button, the notice and the switch
  * line) and at this height it has to lose about 70px, so the vertical rhythm is

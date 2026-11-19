@@ -60,7 +60,7 @@ export const Signup = () => {
      * No account service is connected yet: the form validates, then says so
      * rather than pretending an account was created.
      */
-    setNote('Accounts are not live yet — email support@lunchpaad.com and we will set yours up.')
+    setNote('Accounts are not live yet - email support@lunchpaad.com and we will set yours up.')
   }
 
   return (
@@ -72,7 +72,7 @@ export const Signup = () => {
             Start free, <span className="gradient-text">publish fast</span>
           </h2>
           <p>
-            Describe your business and Lunchpaad builds the site with you — pages, copy and
+            Describe your business and Lunchpaad builds the site with you - pages, copy and
             design included.
           </p>
           <ul className="auth-points">
@@ -107,7 +107,7 @@ export const Signup = () => {
           </div>
 
           <h1>Create your account</h1>
-          <p className="auth-lede">Start building free — no card required.</p>
+          <p className="auth-lede">Start building free - no card required.</p>
 
           <form className="auth-form" onSubmit={handleSubmit} noValidate>
             <div className="auth-field">

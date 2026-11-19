@@ -69,7 +69,7 @@ export const Pricing = () => {
           <h2>Simple, Transparent Pricing</h2>
           <p className="pricing-subtitle">
             Start on the free plan and keep it as long as you like. Upgrade when you need more
-            sites, a custom domain or the advanced AI tools — no setup fee, cancel whenever.
+            sites, a custom domain or the advanced AI tools - no setup fee, cancel whenever.
           </p>
         </div>
 

@@ -64,7 +64,7 @@ export const Features = () => {
           <h2>Everything the build needs, already inside</h2>
           <p className="features-subtitle">
             Generating the pages is only half the job. The same workspace handles speed,
-            search visibility, translation, broken links and publishing — so a finished
+            search visibility, translation, broken links and publishing - so a finished
             project never waits on a second tool.
           </p>
         </div>

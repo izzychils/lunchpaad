@@ -6,7 +6,7 @@ import './FAQ.css'
 export const FAQ_ITEMS = [
   {
     q: 'What exactly is Lunchpaad?',
-    a: 'Lunchpaad is an AI website builder. You describe the site you need in plain English — what the business does, who it is for, what pages it needs — and it generates a working website with layout, copy and components. You then edit it, optimise it and publish it.'
+    a: 'Lunchpaad is an AI website builder. You describe the site you need in plain English - what the business does, who it is for, what pages it needs - and it generates a working website with layout, copy and components. You then edit it, optimise it and publish it.'
   },
   {
     q: 'Do I need to know how to code?',
@@ -14,7 +14,7 @@ export const FAQ_ITEMS = [
   },
   {
     q: 'How does the AI know what my business looks like?',
-    a: 'It builds from what you tell it plus the site type you choose. Everything it writes is a draft you can rewrite — the system is designed to get you to a complete, coherent page quickly, not to invent facts about your company.'
+    a: 'It builds from what you tell it plus the site type you choose. Everything it writes is a draft you can rewrite - the system is designed to get you to a complete, coherent page quickly, not to invent facts about your company.'
   },
   {
     q: 'Can I edit the site after it is generated?',

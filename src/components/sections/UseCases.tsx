@@ -7,7 +7,7 @@ const USE_CASES = [
     icon: <User />,
     label: 'Freelancers & creatives',
     title: 'A portfolio that looks hired, not homemade',
-    copy: 'Describe your work and the AI lays out a project gallery, an about section and a contact route — the three things a client actually looks for.',
+    copy: 'Describe your work and the AI lays out a project gallery, an about section and a contact route - the three things a client actually looks for.',
     points: ['Case-study layout with image gallery', 'Contact section with working enquiry form', 'Copy in your own voice, not filler'],
     color: '#6366f1'
   },
@@ -23,7 +23,7 @@ const USE_CASES = [
     icon: <ShoppingBag />,
     label: 'Online sellers',
     title: 'A storefront without a storefront budget',
-    copy: 'A product catalogue with cart and checkout, built from a description of what you sell — then optimised before it goes live.',
+    copy: 'A product catalogue with cart and checkout, built from a description of what you sell - then optimised before it goes live.',
     points: ['Product grid with variants', 'Cart and checkout flow', 'Order confirmation emails'],
     color: '#a78bfa'
   },
@@ -31,7 +31,7 @@ const USE_CASES = [
     icon: <Rocket />,
     label: 'Product launches',
     title: 'A launch page ready for traffic',
-    copy: 'Hero, feature breakdown, pricing, FAQ and a waitlist capture form — the whole shape of a launch page, generated and then editable.',
+    copy: 'Hero, feature breakdown, pricing, FAQ and a waitlist capture form - the whole shape of a launch page, generated and then editable.',
     points: ['Pricing table with plan toggle', 'FAQ with structured data', 'Waitlist form and thank-you state'],
     color: '#f59e0b'
   }
@@ -82,7 +82,7 @@ export const UseCases = () => {
           <h2>One prompt, four very different sites</h2>
           <p className="use-cases-subtitle">
             Lunchpaad is not a single template with your logo dropped in. It reads what you
-            sell, who you sell it to and what the page has to do — then builds that page.
+            sell, who you sell it to and what the page has to do - then builds that page.
           </p>
         </div>
 
@@ -120,7 +120,7 @@ export const UseCases = () => {
             </div>
             <p>
               Most people arrive with a deadline and no designer. This is where a prompt-led
-              builder saves the most time — and where it honestly does not.
+              builder saves the most time - and where it honestly does not.
             </p>
           </div>
 
@@ -151,7 +151,7 @@ export const UseCases = () => {
             <p>
               Best fit: a site you need this week, that you can keep editing yourself. If you
               need custom integrations or a bespoke brand identity, an agency is still the
-              right call — Lunchpaad just gets you to launch faster.
+              right call - Lunchpaad just gets you to launch faster.
             </p>
             <Link to="/request-demo" className="use-cases-link">
               See a live build
