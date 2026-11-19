@@ -1,6 +1,16 @@
 import { useState, type FormEvent } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, CheckCircle2, Lock, Mail, Phone, User } from 'lucide-react'
+import {
+  ArrowRight,
+  Check,
+  CheckCircle2,
+  Lock,
+  Mail,
+  PenLine,
+  Phone,
+  Sparkles,
+  User
+} from 'lucide-react'
 import './Auth.css'
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -11,13 +21,24 @@ type DemoErrors = {
   phone?: string
 }
 
+const HIGHLIGHTS = [
+  'A live walkthrough of the AI builder, on your own idea.',
+  'The right plan for a single site, a team or an agency.',
+  'A published draft you keep, whether you upgrade or not.'
+]
+
+const NEXT_STEPS = [
+  { text: 'We read your note and match it to the right demo.' },
+  { text: 'You get a 30-minute walkthrough, screen shared.' },
+  { text: 'You leave with a draft site and a link to edit it.' }
+]
+
 export const RequestDemo = () => {
   const [fullName, setFullName] = useState('')
   const [workEmail, setWorkEmail] = useState('')
   const [phoneNumber, setPhoneNumber] = useState('')
   const [errors, setErrors] = useState<DemoErrors>({})
   const [submitted, setSubmitted] = useState(false)
-  const [note, setNote] = useState<string | null>(null)
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault()
@@ -39,41 +60,74 @@ export const RequestDemo = () => {
 
     setErrors(next)
 
-    if (Object.keys(next).length > 0) {
-      setNote(null)
-      return
-    }
+    if (Object.keys(next).length > 0) return
 
     setSubmitted(true)
-    setNote(null)
   }
 
   return (
     <div className="auth-page demo-page">
       <div className="auth-shell">
         <aside className="auth-aside">
-          <span className="auth-pill">Request a Demo</span>
+          <span className="auth-pill">
+            <Sparkles size={12} />
+            Request a demo
+          </span>
           <h2>
-            Ready to transform how you <span className="gradient-text">build websites?</span>
+            See your next site
+            <br />
+            <span className="gradient-text">before you build it.</span>
           </h2>
           <p>
-            Fill out the form below and we'll show you how Lunchpaad can help you build and publish
-            stunning websites in minutes. Our team will get back to you within 24 hours.
+            Thirty minutes, screen shared. Bring the business you want to put online and leave with
+            a draft page you can keep editing yourself.
           </p>
+
+          {/* A wireframe of a generated page: enough to show what the demo puts
+              on screen without pretending to be a screenshot. */}
+          <div className="auth-preview" aria-hidden>
+            <div className="auth-preview-bar">
+              <span />
+              <span />
+              <span />
+              <em>lunchpaad.com/preview</em>
+            </div>
+            <div className="auth-preview-body">
+              <span className="auth-preview-line is-title" />
+              <span className="auth-preview-line is-body" />
+              <span className="auth-preview-line is-short" />
+              <div className="auth-preview-blocks">
+                <span />
+                <span />
+                <span />
+              </div>
+            </div>
+          </div>
+
           <ul className="auth-points">
-            <li>
-              <CheckCircle2 className="auth-tick" size={18} />
-              Personalized 1-on-1 walkthrough of the AI site builder.
-            </li>
-            <li>
-              <CheckCircle2 className="auth-tick" size={18} />
-              Tailored plans and custom solutions for your business or agency.
-            </li>
-            <li>
-              <CheckCircle2 className="auth-tick" size={18} />
-              Dedicated 24-hour turnaround on all questions and onboarding.
-            </li>
+            {HIGHLIGHTS.map((point) => (
+              <li key={point}>
+                <CheckCircle2 className="auth-tick" size={18} />
+                {point}
+              </li>
+            ))}
           </ul>
+
+          <div className="auth-stats">
+            <div>
+              <strong>24h</strong>
+              <span>reply time</span>
+            </div>
+            <div>
+              <strong>30min</strong>
+              <span>walkthrough</span>
+            </div>
+            <div>
+              <strong>0</strong>
+              <span>card needed</span>
+            </div>
+          </div>
+
           <p className="auth-trust">
             <Lock size={14} />
             Your details are encrypted and strictly confidential.
@@ -91,102 +145,160 @@ export const RequestDemo = () => {
             </Link>
           </div>
 
-          <span className="demo-badge">Request a Demo</span>
-          <h1>
-            Ready to transform how you <span className="gradient-text">build websites?</span>
-          </h1>
-          <p className="auth-lede">
-            Fill out the form below and we'll help you find the right solution for your website. Our
-            team will get back to you within 24 hours.
-          </p>
+          <div className="auth-heading">
+            <span className="demo-badge">Request a demo</span>
+            <h1>
+              Let&apos;s build your <span className="gradient-text">first site</span> together
+            </h1>
+            <p className="auth-lede">
+              Three details is all we need. We reply within 24 hours with a time that suits you.
+            </p>
+          </div>
 
           {submitted ? (
-            <div className="demo-success">
-              <CheckCircle2 className="demo-success-icon" size={48} />
-              <h3>Demo Request Received!</h3>
+            <div className="demo-success" role="status">
+              <span className="demo-success-ring">
+                <CheckCircle2 size={38} />
+              </span>
+              <h3>Request received</h3>
               <p>
-                Thank you, <strong>{fullName}</strong>. We've received your request and our team
-                will get back to you at <strong>{workEmail}</strong> within 24 hours.
+                Thanks, <strong>{fullName.split(' ')[0]}</strong>. We&apos;ll reply to{' '}
+                <strong>{workEmail}</strong> within 24 hours.
               </p>
-              <Link to="/" className="auth-submit demo-home-btn">
-                Return to Homepage
-              </Link>
+
+              <ol className="demo-success-steps">
+                {NEXT_STEPS.map((step, index) => (
+                  <li key={step.text}>
+                    <span className="demo-success-step-number">{index + 1}</span>
+                    {step.text}
+                  </li>
+                ))}
+              </ol>
+
+              <div className="demo-success-actions">
+                <Link to="/" className="auth-submit demo-home-btn">
+                  Back to homepage
+                </Link>
+                <Link to="/#use-cases" className="demo-ghost-btn">
+                  See what people build
+                  <ArrowRight size={16} />
+                </Link>
+              </div>
             </div>
           ) : (
-            <form className="auth-form" onSubmit={handleSubmit} noValidate>
-              <div className="demo-section-header">
-                <h3>Personal Details</h3>
-              </div>
+            <>
+              {/* The desktop aside carries these promises; on a phone it is
+                  hidden, so the two that matter most stay here. */}
+              <ul className="demo-mobile-points">
+                {HIGHLIGHTS.slice(0, 2).map((point) => (
+                  <li key={point}>
+                    <Check size={14} />
+                    {point}
+                  </li>
+                ))}
+              </ul>
 
-              <div className="auth-field">
-                <label className="auth-label" htmlFor="demo-name">
-                  Full Name
-                </label>
-                <div className={errors.name ? 'auth-control is-invalid' : 'auth-control'}>
-                  <User size={16} />
-                  <input
-                    id="demo-name"
-                    type="text"
-                    value={fullName}
-                    onChange={(event) => setFullName(event.target.value)}
-                    placeholder="John Doe"
-                    autoComplete="name"
-                    aria-invalid={Boolean(errors.name)}
-                  />
+              <form className="auth-form" onSubmit={handleSubmit} noValidate>
+                <div className="auth-field">
+                  <label className="auth-label" htmlFor="demo-name">
+                    Full name
+                    <span className="auth-required" aria-hidden>
+                      *
+                    </span>
+                  </label>
+                  <div className={errors.name ? 'auth-control is-invalid' : 'auth-control'}>
+                    <User size={16} />
+                    <input
+                      id="demo-name"
+                      type="text"
+                      value={fullName}
+                      onChange={(event) => setFullName(event.target.value)}
+                      placeholder="John Doe"
+                      autoComplete="name"
+                      aria-invalid={Boolean(errors.name)}
+                      aria-describedby={errors.name ? 'demo-name-error' : undefined}
+                      required
+                    />
+                  </div>
+                  {errors.name && (
+                    <p className="auth-error" id="demo-name-error">
+                      {errors.name}
+                    </p>
+                  )}
                 </div>
-                {errors.name && <p className="auth-error">{errors.name}</p>}
-              </div>
 
-              <div className="auth-field">
-                <label className="auth-label" htmlFor="demo-email">
-                  Work Email
-                </label>
-                <div className={errors.email ? 'auth-control is-invalid' : 'auth-control'}>
-                  <Mail size={16} />
-                  <input
-                    id="demo-email"
-                    type="email"
-                    value={workEmail}
-                    onChange={(event) => setWorkEmail(event.target.value)}
-                    placeholder="john@company.com"
-                    autoComplete="email"
-                    aria-invalid={Boolean(errors.email)}
-                  />
+                <div className="auth-field">
+                  <label className="auth-label" htmlFor="demo-email">
+                    Work email
+                    <span className="auth-required" aria-hidden>
+                      *
+                    </span>
+                  </label>
+                  <div className={errors.email ? 'auth-control is-invalid' : 'auth-control'}>
+                    <Mail size={16} />
+                    <input
+                      id="demo-email"
+                      type="email"
+                      value={workEmail}
+                      onChange={(event) => setWorkEmail(event.target.value)}
+                      placeholder="john@company.com"
+                      autoComplete="email"
+                      aria-invalid={Boolean(errors.email)}
+                      aria-describedby={errors.email ? 'demo-email-error' : undefined}
+                      required
+                    />
+                  </div>
+                  {errors.email && (
+                    <p className="auth-error" id="demo-email-error">
+                      {errors.email}
+                    </p>
+                  )}
                 </div>
-                {errors.email && <p className="auth-error">{errors.email}</p>}
-              </div>
 
-              <div className="auth-field">
-                <label className="auth-label" htmlFor="demo-phone">
-                  Phone Number (WhatsApp preferred)
-                </label>
-                <div className={errors.phone ? 'auth-control is-invalid' : 'auth-control'}>
-                  <Phone size={16} />
-                  <input
-                    id="demo-phone"
-                    type="tel"
-                    value={phoneNumber}
-                    onChange={(event) => setPhoneNumber(event.target.value)}
-                    placeholder="+1 (555) 000-0000"
-                    autoComplete="tel"
-                    aria-invalid={Boolean(errors.phone)}
-                  />
+                <div className="auth-field">
+                  <label className="auth-label" htmlFor="demo-phone">
+                    Phone number
+                    <span className="auth-hint">WhatsApp preferred</span>
+                  </label>
+                  <div className={errors.phone ? 'auth-control is-invalid' : 'auth-control'}>
+                    <Phone size={16} />
+                    <input
+                      id="demo-phone"
+                      type="tel"
+                      value={phoneNumber}
+                      onChange={(event) => setPhoneNumber(event.target.value)}
+                      placeholder="+1 (555) 000-0000"
+                      autoComplete="tel"
+                      aria-invalid={Boolean(errors.phone)}
+                      aria-describedby={errors.phone ? 'demo-phone-error' : undefined}
+                      required
+                    />
+                  </div>
+                  {errors.phone && (
+                    <p className="auth-error" id="demo-phone-error">
+                      {errors.phone}
+                    </p>
+                  )}
                 </div>
-                {errors.phone && <p className="auth-error">{errors.phone}</p>}
-              </div>
 
-              <button type="submit" className="auth-submit">
-                Request a Demo
-                <ArrowRight size={18} />
-              </button>
+                <button type="submit" className="auth-submit">
+                  Request my demo
+                  <ArrowRight size={18} />
+                </button>
 
-              {note && (
-                <p className="auth-note" role="status">
-                  {note}
+                <p className="demo-form-note">
+                  <PenLine size={14} />
+                  No credit card, no sales sequence. One reply from a person.
                 </p>
-              )}
-            </form>
+              </form>
+            </>
           )}
+
+          <p className="auth-legal">
+            By requesting a demo you agree to our{' '}
+            <Link to="/privacy-policy">privacy policy</Link> and{' '}
+            <Link to="/terms-of-use">terms of use</Link>.
+          </p>
         </main>
       </div>
     </div>

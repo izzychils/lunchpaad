@@ -472,3 +472,330 @@
   padding: 0 1.75rem;
   text-decoration: none;
 }
+
+/* ------------------------------------------------- demo page, second pass */
+
+/* The request page is the only place a visitor sees a form, so it gets a
+   slightly richer surface than the old login shell: a soft dot grid behind the
+   card and an accent line across its top edge, both cheap and static. */
+.demo-page {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(58rem 28rem at 10% -12%, rgba(108, 92, 231, 0.14), transparent 62%),
+    radial-gradient(42rem 22rem at 88% 108%, rgba(0, 206, 201, 0.1), transparent 55%),
+    linear-gradient(180deg, var(--bg-white) 0%, var(--bg-light) 100%);
+}
+
+.demo-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(108, 92, 231, 0.1) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(60rem 40rem at 20% 0%, black, transparent 72%);
+  -webkit-mask-image: radial-gradient(60rem 40rem at 20% 0%, black, transparent 72%);
+  pointer-events: none;
+}
+
+.demo-page .auth-shell {
+  position: relative;
+}
+
+.demo-page .auth-card {
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 30px 70px -40px rgba(15, 15, 26, 0.35), 0 2px 0 rgba(255, 255, 255, 0.9) inset;
+}
+
+.demo-page .auth-card::after {
+  content: '';
+  position: absolute;
+  inset-inline: 18%;
+  top: -1px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), var(--accent-color), transparent);
+  opacity: 0.7;
+}
+
+.demo-page .auth-card {
+  position: relative;
+}
+
+.auth-aside .auth-pill {
+  gap: 0.4rem;
+}
+
+.auth-aside .gradient-text {
+  display: inline;
+}
+
+/* ------------------------------------------------------- generated preview */
+
+.auth-preview {
+  margin-top: 1.6rem;
+  max-width: 24rem;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  background: var(--bg-white);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.auth-preview-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.55rem 0.7rem;
+  border-bottom: 1px solid var(--border-color);
+  background: #fbfaff;
+}
+
+.auth-preview-bar span {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #e3e0f0;
+}
+
+.auth-preview-bar em {
+  margin-left: 0.45rem;
+  font-style: normal;
+  font-size: 0.62rem;
+  color: #a09eb3;
+  letter-spacing: 0.01em;
+}
+
+.auth-preview-body {
+  display: grid;
+  gap: 0.4rem;
+  padding: 0.9rem;
+}
+
+.auth-preview-line {
+  display: block;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #eae8f6, #f4f2fb);
+}
+
+.auth-preview-line.is-title {
+  height: 15px;
+  width: 64%;
+  background: linear-gradient(90deg, #cbc5f4, #e2ddfa);
+}
+
+.auth-preview-line.is-body {
+  width: 84%;
+}
+
+.auth-preview-line.is-short {
+  width: 46%;
+}
+
+.auth-preview-blocks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4rem;
+  margin-top: 0.35rem;
+}
+
+.auth-preview-blocks span {
+  height: 36px;
+  border-radius: 9px;
+  background: linear-gradient(160deg, #f0eefb, #e3dff7);
+}
+
+/* ------------------------------------------------------------- aside extras */
+
+.auth-stats {
+  display: flex;
+  gap: 1.75rem;
+  margin-top: 1.6rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-color, rgba(15, 15, 26, 0.08));
+}
+
+.auth-stats div {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.auth-stats strong {
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.auth-stats span {
+  font-size: 0.74rem;
+  color: var(--text-secondary);
+}
+
+/* ----------------------------------------------------------------- fields */
+
+.auth-label {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.auth-required {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.auth-hint {
+  margin-left: auto;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.auth-submit svg {
+  transition: transform 0.25s ease;
+}
+
+.auth-submit:hover svg {
+  transform: translateX(3px);
+}
+
+.demo-form-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.demo-form-note svg {
+  flex: none;
+  color: var(--primary-color);
+}
+
+/* The aside is desktop-only, so a phone gets the two strongest promises above
+   the first field instead of an empty column. */
+.demo-mobile-points {
+  display: none;
+}
+
+@media (max-width: 959px) {
+  .demo-mobile-points {
+    display: grid;
+    gap: 0.45rem;
+    margin-bottom: 1rem;
+    padding: 0.8rem 0.9rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background: rgba(108, 92, 231, 0.04);
+  }
+
+  .demo-mobile-points li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.45rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+
+  .demo-mobile-points svg {
+    flex: none;
+    margin-top: 2px;
+    color: var(--primary-color);
+  }
+}
+
+/* ----------------------------------------------------------------- success */
+
+.demo-page .demo-success {
+  gap: 0.75rem;
+  padding: 1.5rem 0.5rem;
+}
+
+.demo-success-ring {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  border: 1px solid rgba(16, 185, 129, 0.28);
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.demo-success-steps {
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+  width: 100%;
+  max-width: 21rem;
+  margin-top: 0.35rem;
+  text-align: left;
+}
+
+.demo-success-steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.demo-success-step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex: none;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: rgba(108, 92, 231, 0.1);
+  color: var(--primary-color);
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.demo-success-actions {
+  display: grid;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 21rem;
+  margin-top: 0.35rem;
+}
+
+.demo-ghost-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background: var(--bg-white);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.demo-ghost-btn:hover {
+  border-color: rgba(108, 92, 231, 0.35);
+  color: var(--primary-color);
+}
+
+@media (max-height: 700px) {
+  .demo-mobile-points {
+    display: none;
+  }
+
+  .auth-preview,
+  .auth-stats {
+    display: none;
+  }
+}
