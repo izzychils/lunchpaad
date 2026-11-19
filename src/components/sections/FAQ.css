@@ -1,0 +1,121 @@
+.faq {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-white) 100%);
+}
+
+.faq-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.faq-intro h2 {
+  margin: 1.25rem 0 1rem;
+  font-size: clamp(1.9rem, 3.4vw, 2.5rem);
+  line-height: 1.15;
+}
+
+.faq-intro p {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  max-width: 340px;
+}
+
+.faq-contact-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(108, 92, 231, 0.3);
+  background: rgba(108, 92, 231, 0.07);
+  color: var(--primary-color);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.faq-contact-link:hover {
+  background: rgba(108, 92, 231, 0.12);
+  border-color: rgba(108, 92, 231, 0.45);
+}
+
+.faq-list {
+  border-top: 1px solid var(--border-color);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.15rem 0.25rem;
+  background: none;
+  text-align: left;
+  font-size: 0.98rem;
+  font-weight: 650;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.faq-question:hover {
+  color: var(--primary-color);
+}
+
+.faq-chevron {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--text-secondary);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.faq-item.is-open .faq-chevron {
+  transform: rotate(180deg);
+  color: var(--primary-color);
+}
+
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.35s ease, opacity 0.35s ease;
+}
+
+.faq-item.is-open .faq-answer {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.faq-answer p {
+  overflow: hidden;
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  max-width: 620px;
+  padding-right: 2rem;
+}
+
+.faq-item.is-open .faq-answer p {
+  padding-bottom: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .faq-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .faq {
+    padding: 4rem 0;
+  }
+
+  .faq-intro p {
+    max-width: none;
+  }
+}

@@ -1,11 +1,22 @@
-import { Sparkles, Plus, Lightbulb, ArrowRight } from 'lucide-react'
+import { Sparkles, Plus, Lightbulb, ArrowRight, Check } from 'lucide-react'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { WordRotate } from '../ui/word-rotate'
 import { AnimatedPlaceholder } from '../ui/animated-placeholder'
 import './Hero.css'
 
+const TRUST_POINTS = ['No code required', 'Publish in minutes', 'SEO built in']
+
 export const Hero = () => {
   const [inputValue, setInputValue] = useState('')
+  const navigate = useNavigate()
+
+  /* The prompt box is a preview of the builder, not a real generator: the arrow
+     takes the visitor to the demo request with what they typed already in hand. */
+  const startBuild = () => {
+    const prompt = inputValue.trim()
+    navigate(prompt ? `/request-demo?prompt=${encodeURIComponent(prompt)}` : '/request-demo')
+  }
   
   const suggestions = [
     'a modern portfolio website',
@@ -57,6 +68,15 @@ export const Hero = () => {
             Just describe what you want, and our AI builds it.
           </p>
 
+          <div className="hero-trust">
+            {TRUST_POINTS.map((point) => (
+              <span key={point} className="hero-trust-item">
+                <Check size={14} />
+                {point}
+              </span>
+            ))}
+          </div>
+
           <div className="hero-input-wrapper">
             <div className="hero-input-container">
               <div className="hero-input-placeholder-wrapper">
@@ -65,6 +85,10 @@ export const Hero = () => {
                   className="hero-input"
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') startBuild()
+                  }}
+                  aria-label="Describe the website you want to build"
                 />
                 {!inputValue && (
                   <div className="hero-input-placeholder">
@@ -77,13 +101,25 @@ export const Hero = () => {
                 )}
               </div>
               <div className="hero-input-actions">
-                <button className="icon-btn" aria-label="Add attachment">
+                <button className="icon-btn" aria-label="Add attachment" type="button">
                   <Plus size={20} />
                 </button>
-                <button className="icon-btn" aria-label="Get suggestions">
+                <button
+                  className="icon-btn"
+                  aria-label="Use a suggested prompt"
+                  type="button"
+                  onClick={() =>
+                    setInputValue(suggestions[Math.floor(Math.random() * suggestions.length)])
+                  }
+                >
                   <Lightbulb size={20} />
                 </button>
-                <button className="icon-btn primary" aria-label="Generate">
+                <button
+                  className="icon-btn primary"
+                  aria-label="Start building"
+                  type="button"
+                  onClick={startBuild}
+                >
                   <ArrowRight size={20} />
                 </button>
               </div>

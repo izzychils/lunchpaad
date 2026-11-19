@@ -8,17 +8,17 @@ export const Footer = () => {
       title: 'Product',
       links: [
         { text: 'Features', href: '/#features' },
+        { text: 'Use cases', href: '/#use-cases' },
         { text: 'How it works', href: '/#how-it-works' },
-        // { text: 'Templates', href: '#' },
-        { text: 'Pricing', href: '/#pricing' }
+        { text: 'Pricing', href: '/#pricing' },
+        { text: 'FAQ', href: '/#faq' }
       ]
     },
     {
       title: 'Company',
       links: [
         { text: 'About', href: '/about' },
-        // { text: 'Blog', href: '#' },
-        // { text: 'Careers', href: '#' },
+        { text: 'Request a demo', href: '/request-demo' },
         { text: 'Contact', href: '/contact' }
       ]
     }

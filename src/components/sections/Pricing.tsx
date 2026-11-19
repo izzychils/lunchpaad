@@ -1,4 +1,4 @@
-import { Check } from 'lucide-react'
+import { Check, CreditCard } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import './Pricing.css'
 
@@ -62,8 +62,15 @@ export const Pricing = () => {
     <section className="pricing" id="pricing">
       <div className="container">
         <div className="pricing-header">
+          <span className="section-eyebrow">
+            <CreditCard size={14} />
+            Pricing
+          </span>
           <h2>Simple, Transparent Pricing</h2>
-          <p className="pricing-subtitle">Choose the plan that's right for you</p>
+          <p className="pricing-subtitle">
+            Start on the free plan and keep it as long as you like. Upgrade when you need more
+            sites, a custom domain or the advanced AI tools — no setup fee, cancel whenever.
+          </p>
         </div>
 
         <div className="pricing-grid">

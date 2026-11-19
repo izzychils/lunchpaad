@@ -1,4 +1,4 @@
-import { Search, Languages, Gauge, AlertCircle, Wand2, Eye, Code, Rocket } from 'lucide-react'
+import { Search, Languages, Gauge, AlertCircle, Wand2, Eye, Code, Rocket, Sparkles } from 'lucide-react'
 import './Features.css'
 
 export const Features = () => {
@@ -57,9 +57,15 @@ export const Features = () => {
     <section className="features" id="features">
       <div className="container">
         <div className="features-header">
-          <h2>AI-Powered Features</h2>
+          <span className="section-eyebrow">
+            <Sparkles size={14} />
+            Capabilities
+          </span>
+          <h2>Everything the build needs, already inside</h2>
           <p className="features-subtitle">
-            Advanced tools to build, optimize, and scale your website
+            Generating the pages is only half the job. The same workspace handles speed,
+            search visibility, translation, broken links and publishing — so a finished
+            project never waits on a second tool.
           </p>
         </div>
 

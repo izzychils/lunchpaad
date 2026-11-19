@@ -216,3 +216,23 @@ a {
   background: rgba(108, 92, 231, 0.2);
   color: var(--text-primary);
 }
+
+/* ---------------------------------------------------------- section eyebrow */
+
+/* A small pill above the section headings. Each section already had a centred
+   header; the eyebrow gives the page a reading rhythm without changing the
+   layout of that header. */
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(108, 92, 231, 0.18);
+  background: rgba(108, 92, 231, 0.07);
+  color: var(--primary-color);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}

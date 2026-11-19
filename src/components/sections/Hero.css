@@ -243,3 +243,39 @@
     padding: 0 1rem;
   }
 }
+
+/* Hero polish: the three promises under the subtitle, and a focus ring that
+   matches the rest of the form controls. */
+.hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 1.25rem;
+  margin: -1.75rem auto 2rem;
+  animation: fadeIn 1s ease 0.5s both;
+}
+
+.hero-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.hero-trust-item svg {
+  color: var(--green);
+}
+
+.hero-input:focus-visible {
+  outline: 2px solid rgba(108, 92, 231, 0.45);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .hero-trust {
+    margin-top: -1rem;
+  }
+}

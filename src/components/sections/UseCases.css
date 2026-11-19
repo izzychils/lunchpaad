@@ -1,0 +1,238 @@
+.use-cases {
+  padding: 6rem 0;
+  background:
+    radial-gradient(60rem 30rem at 15% 0%, rgba(108, 92, 231, 0.07), transparent 55%),
+    linear-gradient(180deg, var(--bg-white) 0%, var(--bg-light) 100%);
+}
+
+.use-cases-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
+}
+
+.use-cases-header h2 {
+  margin: 1.25rem 0 1rem;
+}
+
+.use-cases-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.use-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.use-case-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  background: var(--bg-white);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.use-case-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(108, 92, 231, 0.28);
+  box-shadow: var(--shadow-md);
+}
+
+.use-case-top {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.use-case-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.use-case-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.use-case-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.use-case-card h3 {
+  font-size: 1.2rem;
+  line-height: 1.35;
+  margin-bottom: 0.75rem;
+}
+
+.use-case-copy {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.use-case-points {
+  list-style: none;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-color);
+  display: grid;
+  gap: 0.55rem;
+}
+
+.use-case-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+}
+
+.use-case-points svg {
+  color: var(--primary-color);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* ------------------------------------------------------------ comparison */
+
+.comparison {
+  margin-top: 4rem;
+  padding: 2.25rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  background: linear-gradient(160deg, rgba(108, 92, 231, 0.06), rgba(255, 255, 255, 0.9));
+  box-shadow: var(--shadow-md);
+}
+
+.comparison-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.comparison-head h3 {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+}
+
+.comparison-head p {
+  max-width: 380px;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.comparison-scroll {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background: var(--bg-white);
+}
+
+.comparison-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.comparison-table th {
+  padding: 0.9rem 1.1rem;
+  text-align: left;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  background: var(--bg-light);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.comparison-table td {
+  padding: 0.95rem 1.1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-task {
+  font-weight: 650;
+  color: var(--text-primary) !important;
+  white-space: nowrap;
+}
+
+.comparison-highlight {
+  background: rgba(108, 92, 231, 0.05);
+  color: var(--text-primary) !important;
+}
+
+.comparison-table th.comparison-highlight {
+  color: var(--primary-color) !important;
+  background: rgba(108, 92, 231, 0.1);
+}
+
+.comparison-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.comparison-foot p {
+  max-width: 620px;
+  font-size: 0.86rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.use-cases-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  white-space: nowrap;
+}
+
+.use-cases-link:hover {
+  gap: 0.75rem;
+}
+
+@media (max-width: 767px) {
+  .use-cases {
+    padding: 4rem 0;
+  }
+
+  .comparison {
+    padding: 1.5rem;
+  }
+}

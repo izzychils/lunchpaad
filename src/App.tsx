@@ -6,6 +6,8 @@ import { Features } from './components/sections/Features'
 import { HowItWorks } from './components/sections/HowItWorks'
 import { Pricing } from './components/sections/Pricing'
 import { WebsiteTypes } from './components/sections/WebsiteTypes'
+import { UseCases } from './components/sections/UseCases'
+import { FAQ } from './components/sections/FAQ'
 import { CTA } from './components/sections/CTA'
 import { Footer } from './components/layout/Footer'
 import { ScrollToTop } from './components/layout/ScrollToTop'
@@ -24,9 +26,11 @@ function HomePage() {
       <Hero />
       <Stats />
       <Features />
+      <UseCases />
       <HowItWorks />
       <Pricing />
       <WebsiteTypes />
+      <FAQ />
       <CTA />
     </main>
   )

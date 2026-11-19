@@ -8,6 +8,14 @@ import {
 } from '../ui/dropdown-menu'
 import './Header.css'
 
+const NAV_ITEMS = [
+  { label: 'Features', to: '/#features' },
+  { label: 'Use cases', to: '/#use-cases' },
+  { label: 'How it works', to: '/#how-it-works' },
+  { label: 'Pricing', to: '/#pricing' },
+  { label: 'FAQ', to: '/#faq' }
+]
+
 export const Header = () => {
   return (
     <header className="header">
@@ -22,9 +30,11 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="nav-desktop">
-            <a href="/#features" className="nav-link">Features</a>
-            <a href="/#how-it-works" className="nav-link">How it works</a>
-            <a href="/#pricing" className="nav-link">Pricing</a>
+            {NAV_ITEMS.map((item) => (
+              <Link key={item.to} to={item.to} className="nav-link">
+                {item.label}
+              </Link>
+            ))}
           </nav>
 
           {/* Desktop CTA */}
@@ -41,26 +51,18 @@ export const Header = () => {
                 </button>
               </DropdownMenuTrigger>
 
-              <DropdownMenuContent 
+              <DropdownMenuContent
                 className="mobile-menu-dropdown-content"
                 align="end"
                 sideOffset={8}
               >
-                <DropdownMenuItem asChild>
-                  <a href="/#features" className="dropdown-nav-link">
-                    Features
-                  </a>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <a href="/#how-it-works" className="dropdown-nav-link">
-                    How it works
-                  </a>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <a href="/#pricing" className="dropdown-nav-link">
-                    Pricing
-                  </a>
-                </DropdownMenuItem>
+                {NAV_ITEMS.map((item) => (
+                  <DropdownMenuItem key={item.to} asChild>
+                    <Link to={item.to} className="dropdown-nav-link">
+                      {item.label}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
                 <div className="dropdown-cta-buttons">
                   <Link to="/request-demo" className="btn-primary-dropdown">Request a Demo</Link>
                 </div>

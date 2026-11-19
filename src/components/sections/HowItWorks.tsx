@@ -1,3 +1,4 @@
+import { Workflow } from 'lucide-react'
 import './HowItWorks.css'
 
 export const HowItWorks = () => {
@@ -5,17 +6,20 @@ export const HowItWorks = () => {
     {
       number: '01',
       title: 'Describe Your Vision',
-      description: 'Tell our AI what kind of website you want to build using natural language'
+      description:
+        'Say what the business does, who it is for and which pages you need. Pick a site type, or start from an empty prompt and write it yourself.'
     },
     {
       number: '02',
       title: 'AI Builds It',
-      description: 'Watch as AI creates your website with all the features and design you requested'
+      description:
+        'Layout, copy, components and a working preview appear while you watch. Swap sections, rewrite a line, or regenerate one block without starting over.'
     },
     {
       number: '03',
       title: 'Optimize & Launch',
-      description: 'Use AI tools to optimize SEO, performance, and translate to multiple languages'
+      description:
+        'Run the SEO and performance checks, translate the copy if you need a second language, then publish to a Lunchpaad URL or your own domain.'
     }
   ]
 
@@ -23,9 +27,14 @@ export const HowItWorks = () => {
     <section className="how-it-works" id="how-it-works">
       <div className="container">
         <div className="how-it-works-header">
+          <span className="section-eyebrow">
+            <Workflow size={14} />
+            Workflow
+          </span>
           <h2>How It Works</h2>
           <p className="how-it-works-subtitle">
-            From idea to live website in three simple steps
+            Three steps from a sentence to a live website. No setup wizard, no plugin
+            shopping, no developer on call.
           </p>
         </div>
 
